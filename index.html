@@ -37,106 +37,95 @@
         scroll-behavior: smooth;
       }
       .gradient-text {
-        background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
-        background-size: 200% 200%;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        animation: gradient 8s ease infinite;
+        color: #ec4899;
       }
       .card-hover {
         transition: all 0.3s ease;
       }
       .card-hover:hover {
         transform: translateY(-5px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        box-shadow: 0 10px 30px -5px rgba(236, 72, 153, 0.15), 0 5px 15px -5px rgba(236, 72, 153, 0.1);
       }
     </style>
   </head>
-  <body class="bg-gray-900 text-gray-100 font-sans overflow-x-hidden">
+  <body class="bg-white text-gray-900 font-sans overflow-x-hidden">
     <!-- Animated Background -->
     <div class="fixed inset-0 -z-50 overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 opacity-90"></div>
-      <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+      <div class="absolute inset-0 bg-white"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-pink-50 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-50 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
     </div>
 
     <!-- NAVBAR -->
-    <header class="fixed w-full top-0 bg-gray-900/80 backdrop-blur-md border-b border-gray-700 z-50">
+    <header class="fixed w-full top-0 bg-white/90 backdrop-blur-md border-b border-gray-200 z-50 shadow-sm">
       <div class="max-w-7xl mx-auto flex justify-between items-center p-4 md:p-6">
         <a href="#home" class="text-2xl font-bold gradient-text hover:opacity-80 transition">Princess Debra</a>
         <nav class="hidden md:flex space-x-8 items-center">
-          <a href="#about" class="hover:text-cyan-400 transition font-medium text-sm uppercase tracking-wider">About</a>
-          <a href="#skills" class="hover:text-cyan-400 transition font-medium text-sm uppercase tracking-wider">Skills</a>
-          <a href="#projects" class="hover:text-cyan-400 transition font-medium text-sm uppercase tracking-wider">Projects</a>
-          <a href="#experience" class="hover:text-cyan-400 transition font-medium text-sm uppercase tracking-wider">Experience</a>
-          <a href="#contact" class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-white font-medium hover:opacity-90 transition text-sm">Contact</a>
+          <a href="#about" class="text-gray-700 hover:text-pink-600 transition font-medium text-sm uppercase tracking-wider">About</a>
+          <a href="#skills" class="text-gray-700 hover:text-pink-600 transition font-medium text-sm uppercase tracking-wider">Skills</a>
+          <a href="#projects" class="text-gray-700 hover:text-pink-600 transition font-medium text-sm uppercase tracking-wider">Projects</a>
+          <a href="#experience" class="text-gray-700 hover:text-pink-600 transition font-medium text-sm uppercase tracking-wider">Experience</a>
+          <a href="#contact" class="px-4 py-2 bg-pink-500 rounded-full text-white font-medium hover:bg-pink-600 transition text-sm shadow-md">Contact</a>
         </nav>
-        <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+        <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-gray-900 focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden hidden bg-gray-800/95 backdrop-blur-lg w-full absolute left-0 top-full border-t border-gray-700">
+      <div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-lg w-full absolute left-0 top-full border-t border-gray-200 shadow-lg">
         <div class="flex flex-col space-y-4 p-6">
-          <a href="#about" class="hover:text-cyan-400 transition">About</a>
-          <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
-          <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
-          <a href="#experience" class="hover:text-cyan-400 transition">Experience</a>
-          <a href="#contact" class="mt-4 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-white font-medium hover:opacity-90 transition text-center">Contact</a>
+          <a href="#about" class="text-gray-700 hover:text-pink-600 transition">About</a>
+          <a href="#skills" class="text-gray-700 hover:text-pink-600 transition">Skills</a>
+          <a href="#projects" class="text-gray-700 hover:text-pink-600 transition">Projects</a>
+          <a href="#experience" class="text-gray-700 hover:text-pink-600 transition">Experience</a>
+          <a href="#contact" class="mt-4 px-4 py-2 bg-pink-500 rounded-full text-white font-medium hover:bg-pink-600 transition text-center shadow-md">Contact</a>
         </div>
       </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section id="home" class="min-h-screen flex items-center justify-center text-center px-4 pt-20 pb-10 relative overflow-hidden">
-      <div class="absolute top-0 left-0 w-full h-full -z-10">
-        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div class="absolute top-1/3 right-1/4 w-64 h-64 bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div class="absolute bottom-1/4 left-1/2 w-64 h-64 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-      </div>
+    <section id="home" class="min-h-screen flex items-center justify-center text-center px-4 pt-20 pb-10 relative overflow-hidden bg-white">
       
       <div class="max-w-4xl mx-auto relative z-10">
         <div class="mb-8 flex justify-center">
-          <div class="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-cyan-400/30 overflow-hidden shadow-lg">
+          <div class="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-pink-200 overflow-hidden shadow-xl">
             <img 
     src="profilephoto.jpg" 
     alt="Princess Debra" 
     class="w-full h-full object-cover"
   > 
-            <div class="w-full h-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-white text-4xl font-bold">PD</div>
+            <div class="w-full h-full bg-pink-500 flex items-center justify-center text-white text-4xl font-bold">PD</div>
           </div>
         </div>
         <h1 class="text-4xl md:text-6xl font-bold mb-4">
           <span class="gradient-text">Princess Debra Jeruto Kiptoo</span>
         </h1>
-        <div class="text-xl md:text-2xl mb-6">
-          <span class="inline-block mr-2">Computer Scientist</span>
-          <span class="inline-block mx-2">•</span>
-          <span class="inline-block mr-2">Software Developer</span>
-          <span class="inline-block mx-2">•</span>
-          <span class="inline-block">Data Analyst</span>
+        <div class="text-xl md:text-2xl mb-6 text-gray-700 min-h-[2rem]">
+          <span class="inline-block mr-2">I'm a</span>
+          <span id="typed-text" class="inline-block text-pink-600 font-semibold"></span>
+          <span id="cursor" class="inline-block animate-pulse">|</span>
         </div>
-        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
           I craft digital experiences that solve real problems with clean code, intuitive design and data-driven insights.
         </p>
         <div class="mt-8 flex flex-wrap justify-center gap-4">
-          <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+          <a href="#projects" class="px-8 py-3 bg-pink-500 text-white font-semibold rounded-full hover:bg-pink-600 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
             View My Work
           </a>
-          <a href="#contact" class="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400/10 transition-all duration-300">
+          <a href="#contact" class="px-8 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-full hover:border-pink-400 hover:text-pink-600 transition-all duration-300">
             Get In Touch
           </a>
         </div>
         <div class="mt-12 flex justify-center space-x-6">
-          <a href="https://github.com/princessdebra" target="_blank" class="text-gray-400 hover:text-white transition">
+          <a href="https://github.com/princessdebra" target="_blank" class="text-gray-500 hover:text-pink-600 transition">
             <i class="fab fa-github text-2xl"></i>
           </a>
-          <a href="https://www.linkedin.com/in/princess-%20debra-4bb2612b9/" target="_blank" class="text-gray-400 hover:text-blue-400 transition">
+          <a href="https://www.linkedin.com/in/princess-%20debra-4bb2612b9/" target="_blank" class="text-gray-500 hover:text-pink-600 transition">
             <i class="fab fa-linkedin text-2xl"></i>
           </a>
-          <a href="mailto:debzziiie@gmail.com" class="text-gray-400 hover:text-red-400 transition">
+          <a href="mailto:debzziiie@gmail.com" class="text-gray-500 hover:text-pink-600 transition">
             <i class="fas fa-envelope text-2xl"></i>
           </a>
         </div>
@@ -144,25 +133,25 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="py-20 px-6 max-w-6xl mx-auto">
+    <section id="about" class="py-20 px-6 max-w-6xl mx-auto bg-white">
       <div class="flex flex-col md:flex-row items-center gap-12">
         <div class="md:w-1/2">
           <div class="relative">
-            <div class="w-full h-80 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-700/50 shadow-xl">
+            <div class="w-full h-80 bg-gradient-to-br from-pink-50 to-cyan-50 rounded-2xl overflow-hidden border border-gray-200 shadow-xl">
               
                <img 
     src="photo2.jpg" 
     alt="Princess Debra" 
     class="w-full h-full object-cover"
   >
-              <div class="w-full h-full flex items-center justify-center text-gray-300">
+              <div class="w-full h-full flex items-center justify-center text-gray-400">
                 <i class="fas fa-user text-6xl opacity-30"></i>
               </div>
             </div>
-            <div class="absolute -bottom-6 -right-6 bg-gray-800 p-4 rounded-xl border border-gray-700 shadow-lg">
+            <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl border border-gray-200 shadow-xl">
               <div class="flex items-center space-x-2">
                 <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                <span class="text-sm font-medium">Available for work</span>
+                <span class="text-sm font-medium text-gray-700">Available for work</span>
               </div>
             </div>
           </div>
@@ -171,31 +160,31 @@
           <h2 class="text-3xl md:text-4xl font-bold mb-6">
             <span class="gradient-text">About Me</span>
           </h2>
-          <p class="text-lg text-gray-300 leading-relaxed mb-6">
-            I'm a passionate <span class="text-cyan-400 font-medium">Computer Scientist</span> based in Nairobi, Kenya, specializing in building performant digital experiences with Flutter, Python and modern web technologies.
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            I'm a passionate <span class="text-pink-600 font-medium">Computer Scientist</span> based in Nairobi, Kenya, specializing in building performant digital experiences with Flutter, Python and modern web technologies.
           </p>
-          <p class="text-gray-400 mb-8">
+          <p class="text-gray-600 mb-8">
             With expertise spanning mobile development, data analytics and project management, I bring a unique combination of technical depth and leadership to every project. I thrive in agile environments where I can solve complex problems with elegant solutions.
           </p>
           <div class="grid grid-cols-2 gap-4 mb-8">
             <div class="flex items-center space-x-2">
-              <i class="fas fa-map-marker-alt text-cyan-400"></i>
-              <span class="text-gray-300">Nairobi, Kenya</span>
+              <i class="fas fa-map-marker-alt text-pink-500"></i>
+              <span class="text-gray-700">Nairobi, Kenya</span>
             </div>
             <div class="flex items-center space-x-2">
-              <i class="fas fa-graduation-cap text-cyan-400"></i>
-              <span class="text-gray-300">Computer Science</span>
+              <i class="fas fa-graduation-cap text-pink-500"></i>
+              <span class="text-gray-700">Computer Science</span>
             </div>
             <div class="flex items-center space-x-2">
-              <i class="fas fa-code text-cyan-400"></i>
-              <span class="text-gray-300">3+ Years Experience</span>
+              <i class="fas fa-code text-pink-500"></i>
+              <span class="text-gray-700">3+ Years Experience</span>
             </div>
             <div class="flex items-center space-x-2">
-              <i class="fas fa-project-diagram text-cyan-400"></i>
-              <span class="text-gray-300">10+ Projects</span>
+              <i class="fas fa-project-diagram text-pink-500"></i>
+              <span class="text-gray-700">10+ Projects</span>
             </div>
           </div>
-          <a href="#contact" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-full hover:shadow-lg transition-all">
+          <a href="#contact" class="inline-flex items-center px-6 py-3 bg-pink-500 text-white font-medium rounded-full hover:bg-pink-600 hover:shadow-xl transition-all">
             Contact Me
             <i class="fas fa-arrow-right ml-2"></i>
           </a>
@@ -204,117 +193,117 @@
     </section>
 
     <!-- SKILLS SECTION -->
-    <section id="skills" class="py-20 px-6 bg-gray-800/50 backdrop-blur-sm">
+    <section id="skills" class="py-20 px-6 bg-white">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">
             <span class="gradient-text">My Skills</span>
           </h2>
-          <p class="text-gray-400 max-w-2xl mx-auto">
+          <p class="text-gray-600 max-w-2xl mx-auto">
             I've worked with a variety of technologies across different domains. Here are some of my core competencies.
           </p>
         </div>
         
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <!-- Skill Category 1 -->
-          <div class="bg-gray-800/80 border border-gray-700 rounded-xl p-6 hover:border-cyan-400/30 transition-all card-hover">
-            <div class="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
-              <i class="fas fa-mobile-alt text-cyan-400 text-xl"></i>
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:border-pink-400 hover:shadow-lg transition-all card-hover">
+            <div class="w-12 h-12 bg-pink-50 rounded-lg flex items-center justify-center mb-4">
+              <i class="fas fa-mobile-alt text-pink-600 text-xl"></i>
             </div>
-            <h3 class="text-lg font-semibold mb-3">Mobile Development</h3>
-            <ul class="space-y-2 text-gray-400 text-sm">
+            <h3 class="text-lg font-semibold mb-3 text-gray-800">Mobile Development</h3>
+            <ul class="space-y-2 text-gray-600 text-sm">
               <li class="flex items-center">
-                <i class="fas fa-check text-cyan-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 Flutter & Dart
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-cyan-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 Firebase Integration
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-cyan-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 State Management
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-cyan-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 Native APIs
               </li>
             </ul>
           </div>
           
           <!-- Skill Category 2 -->
-          <div class="bg-gray-800/80 border border-gray-700 rounded-xl p-6 hover:border-purple-400/30 transition-all card-hover">
-            <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
-              <i class="fas fa-laptop-code text-purple-400 text-xl"></i>
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:border-pink-400 hover:shadow-lg transition-all card-hover">
+            <div class="w-12 h-12 bg-pink-50 rounded-lg flex items-center justify-center mb-4">
+              <i class="fas fa-laptop-code text-pink-600 text-xl"></i>
             </div>
-            <h3 class="text-lg font-semibold mb-3">Web Development</h3>
-            <ul class="space-y-2 text-gray-400 text-sm">
+            <h3 class="text-lg font-semibold mb-3 text-gray-800">Web Development</h3>
+            <ul class="space-y-2 text-gray-600 text-sm">
               <li class="flex items-center">
-                <i class="fas fa-check text-purple-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 Next.js & React
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-purple-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 Tailwind CSS
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-purple-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 REST APIs
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-purple-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 UI/UX Design
               </li>
             </ul>
           </div>
           
           <!-- Skill Category 3 -->
-          <div class="bg-gray-800/80 border border-gray-700 rounded-xl p-6 hover:border-blue-400/30 transition-all card-hover">
-            <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4">
-              <i class="fas fa-database text-blue-400 text-xl"></i>
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:border-pink-400 hover:shadow-lg transition-all card-hover">
+            <div class="w-12 h-12 bg-pink-50 rounded-lg flex items-center justify-center mb-4">
+              <i class="fas fa-database text-pink-600 text-xl"></i>
             </div>
-            <h3 class="text-lg font-semibold mb-3">Data Analytics</h3>
-            <ul class="space-y-2 text-gray-400 text-sm">
+            <h3 class="text-lg font-semibold mb-3 text-gray-800">Data Analytics</h3>
+            <ul class="space-y-2 text-gray-600 text-sm">
               <li class="flex items-center">
-                <i class="fas fa-check text-blue-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 Python & Pandas
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-blue-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 Power BI / Tableau
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-blue-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 SQL Databases
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-blue-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 Data Visualization
               </li>
             </ul>
           </div>
           
           <!-- Skill Category 4 -->
-          <div class="bg-gray-800/80 border border-gray-700 rounded-xl p-6 hover:border-green-400/30 transition-all card-hover">
-            <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
-              <i class="fas fa-tasks text-green-400 text-xl"></i>
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:border-pink-400 hover:shadow-lg transition-all card-hover">
+            <div class="w-12 h-12 bg-pink-50 rounded-lg flex items-center justify-center mb-4">
+              <i class="fas fa-tasks text-pink-600 text-xl"></i>
             </div>
-            <h3 class="text-lg font-semibold mb-3">Other Skills</h3>
-            <ul class="space-y-2 text-gray-400 text-sm">
+            <h3 class="text-lg font-semibold mb-3 text-gray-800">Other Skills</h3>
+            <ul class="space-y-2 text-gray-600 text-sm">
               <li class="flex items-center">
-                <i class="fas fa-check text-green-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 Agile / Scrum
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-green-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 Git & GitHub
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-green-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 Project Management
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-green-400 mr-2 text-xs"></i>
+                <i class="fas fa-check text-pink-500 mr-2 text-xs"></i>
                 Technical Writing
               </li>
             </ul>
@@ -324,116 +313,117 @@
     </section>
 
     <!-- PROJECTS SECTION -->
-    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
+    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto bg-white">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
           <span class="gradient-text">Featured Projects</span>
         </h2>
-        <p class="text-gray-400 max-w-2xl mx-auto">
+        <p class="text-gray-600 max-w-2xl mx-auto">
           Here are some of my recent projects that showcase my skills and expertise.
         </p>
       </div>
       
       <div class="grid md:grid-cols-2 gap-8">
-        <!-- Project 1 -->
-        <div class="bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden hover:border-cyan-400/50 transition-all card-hover">
-          <div class="h-48 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 flex items-center justify-center">
-            <i class="fas fa-car text-5xl text-cyan-400 opacity-30"></i>
+         <!-- Project 3 -->
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-pink-400 hover:shadow-xl transition-all card-hover">
+          <div class="h-48 bg-pink-50 flex items-center justify-center">
+            <i class="fas fa-sticky-note text-5xl text-pink-500 opacity-40"></i>
           </div>
           <div class="p-6">
             <div class="flex justify-between items-start mb-4">
-              <h3 class="text-xl font-bold text-white">Chauffeur Booking App</h3>
-              <span class="text-xs bg-cyan-400/10 text-cyan-400 px-3 py-1 rounded-full">Flutter</span>
+              <h3 class="text-xl font-bold text-gray-800">Insurance Claim Fraud Detection Machine Learning Model</h3>
+              <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1 rounded-full font-medium">Machine Learning</span>
             </div>
-            <p class="text-gray-400 mb-6">
-              A complete ride-hailing solution with live tracking, driver scheduling, and payment integration built with Flutter and Firebase.
+            <p class="text-gray-600 mb-6">
+              Developed a machine learning model to detect fraudulent insurance claims using Python. This is an unsupervised learning model that incorporates three algorithms; kmeans clustering, isolation forest and an autoencoder. It uses streamlit(python framework) for the UI. 
             </p>
             <div class="flex justify-between items-center">
-              <a href="https://github.com/princessdebra/chauffer" target="_blank" class="text-cyan-400 hover:text-cyan-300 flex items-center">
+              <a href="https://github.com/princessdebra/Fraud-Detection-Model" target="_blank" class="text-pink-600 hover:text-pink-700 flex items-center font-medium">
                 <i class="fab fa-github mr-2"></i> View Code
               </a>
               <div class="flex space-x-2">
-                <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Dart</span>
-                <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Firebase</span>
-                <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Maps</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Python</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Streamlit</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Jupyter Notebook</span>
               </div>
             </div>
           </div>
         </div>
         
+       
+        
         <!-- Project 2 -->
-        <div class="bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all card-hover">
-          <div class="h-48 bg-gradient-to-r from-purple-500/10 to-pink-600/10 flex items-center justify-center">
-            <i class="fas fa-chart-line text-5xl text-purple-400 opacity-30"></i>
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-pink-400 hover:shadow-xl transition-all card-hover">
+          <div class="h-48 bg-gradient-to-r from-pink-50 to-rose-50 flex items-center justify-center">
+            <i class="fas fa-chart-line text-5xl text-pink-500 opacity-40"></i>
           </div>
           <div class="p-6">
             <div class="flex justify-between items-start mb-4">
-              <h3 class="text-xl font-bold text-white">Finance Tracker App</h3>
-              <span class="text-xs bg-purple-400/10 text-purple-400 px-3 py-1 rounded-full">Full Stack</span>
+              <h3 class="text-xl font-bold text-gray-800">Finance Tracker App</h3>
+              <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1 rounded-full font-medium">Full Stack</span>
             </div>
-            <p class="text-gray-400 mb-6">
+            <p class="text-gray-600 mb-6">
               Personal finance manager with transaction tracking, budgeting tools, and rich visualizations powered by REST APIs.
             </p>
             <div class="flex justify-between items-center">
-              <a href="https://github.com/princessdebra/Transaction-Tracking-System" target="_blank" class="text-purple-400 hover:text-purple-300 flex items-center">
+              <a href="https://github.com/princessdebra/Transaction-Tracking-System" target="_blank" class="text-pink-600 hover:text-pink-700 flex items-center font-medium">
                 <i class="fab fa-github mr-2"></i> View Code
               </a>
               <div class="flex space-x-2">
-                <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Flutter</span>
-                <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Node.js</span>
-                <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">MongoDB</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Flutter</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Node.js</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">MongoDB</span>
               </div>
             </div>
           </div>
         </div>
-        
-        <!-- Project 3 -->
-        <div class="bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden hover:border-blue-400/50 transition-all card-hover">
-          <div class="h-48 bg-gradient-to-r from-blue-500/10 to-cyan-600/10 flex items-center justify-center">
-            <i class="fas fa-sticky-note text-5xl text-blue-400 opacity-30"></i>
+         <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-pink-400 hover:shadow-xl transition-all card-hover">
+          <div class="h-48 bg-pink-50 flex items-center justify-center">
+            <i class="fas fa-car text-5xl text-pink-500 opacity-40"></i>
           </div>
           <div class="p-6">
             <div class="flex justify-between items-start mb-4">
-              <h3 class="text-xl font-bold text-white">Notepad App</h3>
-              <span class="text-xs bg-blue-400/10 text-blue-400 px-3 py-1 rounded-full">Mobile</span>
+              <h3 class="text-xl font-bold text-gray-800">Chauffeur Booking App</h3>
+              <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1 rounded-full font-medium">Flutter</span>
             </div>
-            <p class="text-gray-400 mb-6">
-              Feature-rich note-taking application with categorization, search, and full CRUD operations implemented with clean architecture.
+            <p class="text-gray-600 mb-6">
+              A complete ride-hailing solution with live tracking, driver scheduling, and payment integration built with Flutter and Firebase.
             </p>
             <div class="flex justify-between items-center">
-              <a href="https://github.com/princessdebra/Flutter" target="_blank" class="text-blue-400 hover:text-blue-300 flex items-center">
+              <a href="https://github.com/princessdebra/chauffer" target="_blank" class="text-pink-600 hover:text-pink-700 flex items-center font-medium">
                 <i class="fab fa-github mr-2"></i> View Code
               </a>
               <div class="flex space-x-2">
-                <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Flutter</span>
-                <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Hive</span>
-                <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">BLoC</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Dart</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Firebase</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Maps</span>
               </div>
             </div>
           </div>
         </div>
-        
+
+       
         <!-- Project 4 -->
-        <div class="bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden hover:border-green-400/50 transition-all card-hover">
-          <div class="h-48 bg-gradient-to-r from-green-500/10 to-emerald-600/10 flex items-center justify-center">
-            <i class="fas fa-store text-5xl text-green-400 opacity-30"></i>
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-pink-400 hover:shadow-xl transition-all card-hover">
+          <div class="h-48 bg-gradient-to-r from-pink-50 to-rose-50 flex items-center justify-center">
+            <i class="fas fa-store text-5xl text-pink-500 opacity-40"></i>
           </div>
           <div class="p-6">
             <div class="flex justify-between items-start mb-4">
-              <h3 class="text-xl font-bold text-white">Sales Analytics Dashboard</h3>
-              <span class="text-xs bg-green-400/10 text-green-400 px-3 py-1 rounded-full">Data</span>
+              <h3 class="text-xl font-bold text-gray-800">Sales Analytics Dashboard</h3>
+              <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1 rounded-full font-medium">Data</span>
             </div>
-            <p class="text-gray-400 mb-6">
+            <p class="text-gray-600 mb-6">
               Comprehensive retail analytics platform that processes sales data to uncover business insights and trends.
             </p>
             <div class="flex justify-between items-center">
-              <a href="https://github.com/princessdebra/sales-analysis-dashboard" target="_blank" class="text-green-400 hover:text-green-300 flex items-center">
+              <a href="https://github.com/princessdebra/sales-analysis-dashboard" target="_blank" class="text-pink-600 hover:text-pink-700 flex items-center font-medium">
                 <i class="fab fa-github mr-2"></i> View Code
               </a>
               <div class="flex space-x-2">
-                <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Python</span>
-                <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Pandas</span>
-                <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Tableau</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Python</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Pandas</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Tableau</span>
               </div>
             </div>
           </div>
@@ -441,7 +431,7 @@
       </div>
       
       <div class="text-center mt-12">
-        <a href="https://github.com/princessdebra" target="_blank" class="inline-flex items-center px-6 py-3 border border-gray-600 text-gray-300 font-medium rounded-full hover:bg-gray-800/50 hover:border-cyan-400 hover:text-cyan-400 transition-all">
+        <a href="https://github.com/princessdebra" target="_blank" class="inline-flex items-center px-6 py-3 border-2 border-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 hover:border-pink-400 hover:text-pink-600 transition-all">
           View All Projects
           <i class="fas fa-arrow-right ml-2"></i>
         </a>
@@ -449,47 +439,47 @@
     </section>
 
     <!-- EXPERIENCE SECTION -->
-    <section id="experience" class="py-20 px-6 bg-gray-800/50 backdrop-blur-sm">
+    <section id="experience" class="py-20 px-6 bg-white">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">
             <span class="gradient-text">Work Experience</span>
           </h2>
-          <p class="text-gray-400 max-w-2xl mx-auto">
+          <p class="text-gray-600 max-w-2xl mx-auto">
             My professional journey and the roles I've held that shaped my expertise.
           </p>
         </div>
         
         <div class="relative">
           <!-- Timeline -->
-          <div class="hidden md:block absolute left-1/2 h-full w-0.5 bg-gradient-to-b from-cyan-500 via-purple-500 to-blue-500 transform -translate-x-1/2"></div>
+          <div class="hidden md:block absolute left-1/2 h-full w-0.5 bg-pink-300 transform -translate-x-1/2"></div>
           
           <!-- Timeline Item 1 -->
           <div class="flex flex-col md:flex-row items-center justify-between mb-12">
             <div class="md:w-5/12 mb-6 md:mb-0 md:pr-12 text-right">
-              <div class="bg-gray-800/80 border border-gray-700 rounded-xl p-6 shadow-lg">
-                <h3 class="text-xl font-bold text-white mb-2">📊 Data Analyst Intern</h3>
-                <p class="text-cyan-400 font-medium mb-2">Minet Kenya</p>
-                <p class="text-gray-400 text-sm mb-4">May 2025 – Present</p>
-                <ul class="text-gray-300 text-sm space-y-2">
-                  <li class="flex items-start">
-                    <i class="fas fa-check text-cyan-400 mt-1 mr-2 text-xs"></i>
-                    Developed automated reporting systems reducing manual work by 60%
+              <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Data Analyst Intern</h3>
+                <p class="text-pink-600 font-medium mb-2">Minet Kenya</p>
+                <p class="text-gray-500 text-sm mb-4">May 2025 – Present</p>
+                <ul class="text-gray-700 text-sm space-y-2">
+                  <li class="flex items-start justify-end text-right">
+                    <span>Developed automated reporting systems reducing manual work by 60%</span>
+                    <i class="fas fa-check text-pink-500 ml-2 mt-1 text-xs flex-shrink-0"></i>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check text-cyan-400 mt-1 mr-2 text-xs"></i>
-                    Created interactive dashboards for business performance monitoring
+                  <li class="flex items-start justify-end text-right">
+                    <span>Created interactive dashboards for business performance monitoring</span>
+                    <i class="fas fa-check text-pink-500 ml-2 mt-1 text-xs flex-shrink-0"></i>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check text-cyan-400 mt-1 mr-2 text-xs"></i>
-                    Implemented data cleaning pipelines improving data quality by 45%
+                  <li class="flex items-start justify-end text-right">
+                    <span>Implemented data cleaning pipelines improving data quality by 45%</span>
+                    <i class="fas fa-check text-pink-500 ml-2 mt-1 text-xs flex-shrink-0"></i>
                   </li>
                 </ul>
               </div>
             </div>
             
             <div class="hidden md:flex w-2/12 justify-center">
-              <div class="w-6 h-6 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 border-4 border-gray-800 shadow-lg"></div>
+              <div class="w-6 h-6 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-400 border-4 border-white shadow-lg"></div>
             </div>
             
             <div class="md:w-5/12 md:pl-12">
@@ -504,26 +494,26 @@
             </div>
             
             <div class="hidden md:flex w-2/12 justify-center">
-              <div class="w-6 h-6 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 border-4 border-gray-800 shadow-lg"></div>
+              <div class="w-6 h-6 rounded-full bg-pink-500 border-4 border-white shadow-lg"></div>
             </div>
             
             <div class="md:w-5/12 md:pl-12">
-              <div class="bg-gray-800/80 border border-gray-700 rounded-xl p-6 shadow-lg">
-                <h3 class="text-xl font-bold text-white mb-2">💻 Freelance Software Developer</h3>
-                <p class="text-purple-400 font-medium mb-2">Self-Employed</p>
-                <p class="text-gray-400 text-sm mb-4">Jan 2024 – Present</p>
-                <ul class="text-gray-300 text-sm space-y-2">
+              <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Freelance Software Developer</h3>
+                <p class="text-pink-600 font-medium mb-2">Self-Employed</p>
+                <p class="text-gray-500 text-sm mb-4">Jan 2024 – Present</p>
+                <ul class="text-gray-700 text-sm space-y-2">
                   <li class="flex items-start">
-                    <i class="fas fa-check text-purple-400 mt-1 mr-2 text-xs"></i>
-                    Delivered 15+ mobile and web applications for clients across industries
+                    <i class="fas fa-check text-pink-500 mr-2 mt-1 text-xs flex-shrink-0"></i>
+                    <span>Delivered 15+ mobile and web applications for clients across industries</span>
                   </li>
                   <li class="flex items-start">
-                    <i class="fas fa-check text-purple-400 mt-1 mr-2 text-xs"></i>
-                    Achieved 100% client satisfaction with on-time project delivery
+                    <i class="fas fa-check text-pink-500 mr-2 mt-1 text-xs flex-shrink-0"></i>
+                    <span>Achieved 100% client satisfaction with on-time project delivery</span>
                   </li>
                   <li class="flex items-start">
-                    <i class="fas fa-check text-purple-400 mt-1 mr-2 text-xs"></i>
-                    Specialized in MVP development for startups and small businesses
+                    <i class="fas fa-check text-pink-500 mr-2 mt-1 text-xs flex-shrink-0"></i>
+                    <span>Specialized in MVP development for startups and small businesses</span>
                   </li>
                 </ul>
               </div>
@@ -533,31 +523,29 @@
           <!-- Timeline Item 3 -->
           <div class="flex flex-col md:flex-row items-center justify-between">
             <div class="md:w-5/12 mb-6 md:mb-0 md:pr-12 text-right">
-              <div class="bg-gray-800/80 border border-gray-700 rounded-xl p-6 shadow-lg">
-                <h3 class="text-xl font-bold text-white mb-2">🧭 Software Developer</h3>
-                <p class="text-blue-400 font-medium mb-2">Vesen Computing</p>
-                <p class="text-gray-400 text-sm mb-4">May 2024 – Dec 2024</p>
-                <ul class="text-gray-300 text-sm space-y-2">
-                  <li class="flex items-start">
-                    <i class="fas fa-check text-blue-400 mt-1 mr-2 text-xs"></i>
-                    Developed cross-platform mobile applications using Dart and the Flutter framework, contributing to a codebase that prioritized 
-clean architecture and state management.
+              <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Software Developer</h3>
+                <p class="text-pink-600 font-medium mb-2">Vesen Computing</p>
+                <p class="text-gray-500 text-sm mb-4">May 2024 – Dec 2024</p>
+                <ul class="text-gray-700 text-sm space-y-2">
+                  <li class="flex items-start justify-end text-right">
+                    <span>Developed cross-platform mobile applications using Dart and the Flutter framework, contributing to a codebase that prioritized clean architecture and state management.</span>
+                    <i class="fas fa-check text-pink-500 ml-2 mt-1 text-xs flex-shrink-0"></i>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check text-blue-400 mt-1 mr-2 text-xs"></i>
-                    Built responsive and dynamic user interfaces for web applications using React and JavaScript.
+                  <li class="flex items-start justify-end text-right">
+                    <span>Built responsive and dynamic user interfaces for web applications using React and JavaScript.</span>
+                    <i class="fas fa-check text-pink-500 ml-2 mt-1 text-xs flex-shrink-0"></i>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check text-blue-400 mt-1 mr-2 text-xs"></i>
-                    Acted as a technical liaison, directly translating client requirements into technical specifications and actionable development tasks 
-for the team
+                  <li class="flex items-start justify-end text-right">
+                    <span>Acted as a technical liaison, directly translating client requirements into technical specifications and actionable development tasks for the team</span>
+                    <i class="fas fa-check text-pink-500 ml-2 mt-1 text-xs flex-shrink-0"></i>
                   </li>
                 </ul>
               </div>
             </div>
             
             <div class="hidden md:flex w-2/12 justify-center">
-              <div class="w-6 h-6 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 border-4 border-gray-800 shadow-lg"></div>
+              <div class="w-6 h-6 rounded-full bg-pink-500 border-4 border-white shadow-lg"></div>
             </div>
             
             <div class="md:w-5/12 md:pl-12">
@@ -569,52 +557,52 @@ for the team
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="py-20 px-6 bg-gradient-to-br from-gray-900 to-gray-800">
+    <section id="contact" class="py-20 px-6 bg-white">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-6">
           <span class="gradient-text">Let's Connect</span>
         </h2>
-        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+        <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
           I'm currently open to new opportunities, collaborations, or just a friendly chat about tech!
         </p>
         
-        <div class="bg-gray-800/50 border border-gray-700 rounded-2xl p-8 md:p-10 shadow-xl max-w-3xl mx-auto">
+        <div class="bg-white border border-gray-200 rounded-2xl p-8 md:p-10 shadow-xl max-w-3xl mx-auto">
           <div class="grid md:grid-cols-2 gap-8 mb-8 text-left">
             <div>
-              <h3 class="text-xl font-semibold mb-4 text-cyan-400">Contact Info</h3>
-              <ul class="space-y-4 text-gray-300">
+              <h3 class="text-xl font-semibold mb-4 text-pink-600">Contact Info</h3>
+              <ul class="space-y-4 text-gray-700">
                 <li class="flex items-start">
-                  <i class="fas fa-envelope text-cyan-400 mt-1 mr-4"></i>
-                  <a href="mailto:debzziiie@gmail.com" class="hover:text-cyan-400 transition">debzziiie@gmail.com</a>
+                  <i class="fas fa-envelope text-pink-500 mt-1 mr-4"></i>
+                  <a href="mailto:debzziiie@gmail.com" class="hover:text-pink-600 transition">debzziiie@gmail.com</a>
                 </li>
                 <li class="flex items-start">
-                  <i class="fas fa-map-marker-alt text-cyan-400 mt-1 mr-4"></i>
+                  <i class="fas fa-map-marker-alt text-pink-500 mt-1 mr-4"></i>
                   <span>Nairobi, Kenya</span>
                 </li>
                 <li class="flex items-start">
-                  <i class="fab fa-github text-cyan-400 mt-1 mr-4"></i>
-                  <a href="https://github.com/princessdebra" target="_blank" class="hover:text-cyan-400 transition">github.com/princessdebra</a>
+                  <i class="fab fa-github text-pink-500 mt-1 mr-4"></i>
+                  <a href="https://github.com/princessdebra" target="_blank" class="hover:text-pink-600 transition">github.com/princessdebra</a>
                 </li>
                 <li class="flex items-start">
-                  <i class="fab fa-linkedin text-cyan-400 mt-1 mr-4"></i>
-                  <a href="https://www.linkedin.com/in/princess-%20debra-4bb2612b9/" target="_blank" class="hover:text-cyan-400 transition">linkedin.com/in/princess-debra</a>
+                  <i class="fab fa-linkedin text-pink-500 mt-1 mr-4"></i>
+                  <a href="https://www.linkedin.com/in/princess-%20debra-4bb2612b9/" target="_blank" class="hover:text-pink-600 transition">linkedin.com/in/princess-debra</a>
                 </li>
               </ul>
             </div>
             
             <div>
-              <h3 class="text-xl font-semibold mb-4 text-cyan-400">Send Me a Message</h3>
+              <h3 class="text-xl font-semibold mb-4 text-pink-600">Send Me a Message</h3>
               <form class="space-y-4">
                 <div>
-                  <input type="text" placeholder="Your Name" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+                  <input type="text" placeholder="Your Name" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent text-gray-800">
                 </div>
                 <div>
-                  <input type="email" placeholder="Your Email" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+                  <input type="email" placeholder="Your Email" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent text-gray-800">
                 </div>
                 <div>
-                  <textarea placeholder="Your Message" rows="4" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"></textarea>
+                  <textarea placeholder="Your Message" rows="4" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent text-gray-800"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-all transform hover:scale-[1.01]">
+                <button type="submit" class="w-full bg-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-pink-600 transition-all transform hover:scale-[1.01] shadow-md">
                   Send Message
                 </button>
               </form>
@@ -622,16 +610,16 @@ for the team
           </div>
           
           <div class="flex justify-center space-x-6">
-            <a href="https://github.com/princessdebra" target="_blank" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-cyan-500 hover:text-white transition-all">
+            <a href="https://github.com/princessdebra" target="_blank" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-pink-500 hover:text-white transition-all text-gray-700">
               <i class="fab fa-github text-xl"></i>
             </a>
-            <a href="https://www.linkedin.com/in/princess-%20debra-4bb2612b9/" target="_blank" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all">
+            <a href="https://www.linkedin.com/in/princess-%20debra-4bb2612b9/" target="_blank" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-pink-500 hover:text-white transition-all text-gray-700">
               <i class="fab fa-linkedin-in text-xl"></i>
             </a>
-            <a href="https://twitter.com/" target="_blank" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-sky-400 hover:text-white transition-all">
+            <a href="https://twitter.com/" target="_blank" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-pink-500 hover:text-white transition-all text-gray-700">
               <i class="fab fa-twitter text-xl"></i>
             </a>
-            <a href="mailto:debzziiie@gmail.com" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-red-400 hover:text-white transition-all">
+            <a href="mailto:debzziiie@gmail.com" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-pink-500 hover:text-white transition-all text-gray-700">
               <i class="fas fa-envelope text-xl"></i>
             </a>
           </div>
@@ -640,18 +628,18 @@ for the team
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-8 px-6 border-t border-gray-800 text-center">
+    <footer class="py-8 px-6 border-t border-gray-200 text-center bg-white">
       <div class="max-w-6xl mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="mb-4 md:mb-0">
             <a href="#home" class="text-2xl font-bold gradient-text">Princess Debra</a>
           </div>
           <nav class="flex flex-wrap justify-center gap-4 md:gap-6 text-sm">
-            <a href="#about" class="text-gray-400 hover:text-cyan-400 transition">About</a>
-            <a href="#skills" class="text-gray-400 hover:text-cyan-400 transition">Skills</a>
-            <a href="#projects" class="text-gray-400 hover:text-cyan-400 transition">Projects</a>
-            <a href="#experience" class="text-gray-400 hover:text-cyan-400 transition">Experience</a>
-            <a href="#contact" class="text-gray-400 hover:text-cyan-400 transition">Contact</a>
+            <a href="#about" class="text-gray-600 hover:text-pink-600 transition">About</a>
+            <a href="#skills" class="text-gray-600 hover:text-pink-600 transition">Skills</a>
+            <a href="#projects" class="text-gray-600 hover:text-pink-600 transition">Projects</a>
+            <a href="#experience" class="text-gray-600 hover:text-pink-600 transition">Experience</a>
+            <a href="#contact" class="text-gray-600 hover:text-pink-600 transition">Contact</a>
           </nav>
         </div>
         <div class="mt-6 text-gray-500 text-sm">
@@ -661,11 +649,57 @@ for the team
     </footer>
 
     <!-- Back to Top Button -->
-    <a href="#home" id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-gray-800/80 border border-gray-700 rounded-full flex items-center justify-center text-cyan-400 hover:bg-cyan-500 hover:text-white transition-all opacity-0 invisible">
+    <a href="#home" id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-white border-2 border-gray-300 rounded-full flex items-center justify-center text-pink-600 hover:bg-pink-500 hover:text-white hover:border-transparent transition-all opacity-0 invisible shadow-lg">
       <i class="fas fa-arrow-up"></i>
     </a>
 
     <script>
+      // Typing animation
+      const titles = [
+        'Computer Scientist',
+        'Software Developer',
+        'Data Scientist',
+        'Mobile Developer',
+        'Web Developer'
+      ];
+      
+      let titleIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const typedTextElement = document.getElementById('typed-text');
+      const typingSpeed = 100;
+      const deletingSpeed = 50;
+      const pauseDuration = 2000;
+      
+      function type() {
+        const currentTitle = titles[titleIndex];
+        
+        if (isDeleting) {
+          typedTextElement.textContent = currentTitle.substring(0, charIndex - 1);
+          charIndex--;
+        } else {
+          typedTextElement.textContent = currentTitle.substring(0, charIndex + 1);
+          charIndex++;
+        }
+        
+        let typeSpeed = isDeleting ? deletingSpeed : typingSpeed;
+        
+        if (!isDeleting && charIndex === currentTitle.length) {
+          typeSpeed = pauseDuration;
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          titleIndex = (titleIndex + 1) % titles.length;
+        }
+        
+        setTimeout(type, typeSpeed);
+      }
+      
+      // Start typing animation
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(type, 1000);
+      });
+      
       // Mobile menu toggle
       const mobileMenuButton = document.getElementById('mobile-menu-button');
       const mobileMenu = document.getElementById('mobile-menu');
@@ -712,6 +746,4 @@ for the team
       });
     </script>
   </body>
-
 </html>
-
